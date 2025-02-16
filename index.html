@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vite + react</title>
+    
+    
+  </head>
+
+  <body>
+    <div id="root">
+      <button class="btn" type="submit">log in</button>
+      <p class="root1">this is 1st paragrpah</p>
+      <p class="root2">this is 1st paragrpah</p>
+      <p class="root1">this is a lvl 1 noob : pranisha</p>
+      <img src="https://picsum.photos/id/237/200/300" alt="logo" id="dog">
+    </div>
+
+    <script>
+      let division = document.getElementById("root");
+    //   let division = document.querySelector('.btn');
+      // division.style.backgroundColor = 'red';
+      division.style.backgroundColor = "#4caf50";
+      division.style.border = "none";
+      division.style.color = "white"; 
+      division.style.padding = "15px 32px";
+      division.style.textAlign = "center";
+      division.style.textDecoration = "none";
+      division.style.display = "inline - block";
+      division.style.fontSize = "16px";
+      division.style.cursor = "pointer";
+
+      division.style.transition = "backgroundColor 0.3s ease";
+
+      let paragrpah = document.querySelectorAll(".root1");
+      for (let i = 0; i < paragrpah.length; i++) {
+        paragrpah[i].style.color = "black";
+      }
+
+
+    //   changing the content
+
+    let abc = document.querySelector(".root2")
+    abc.textContent='hello world'
+
+    // changing the image
+     let image = document.getElementById('dog');
+     image.setAttribute("src",'https://picsum.photos/200/300?grayscale');
+     
+
+    //  writng the heading
+    const heading= document.createElement('h1')
+    heading.textContent = 'hello world and this is a heading tag document.creat';
+    const para= document.createElement('h1')
+    para.textContent = 'hello world and this is a paragrpah tag document.creat';
+    const root = document.getElementById('root');
+    // root.appendChild(heading); 
+    root.append(heading,para)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <p class="paragraph">Hello World</p>
+
+
+        <button id="button">Change</button>
+    </div>
+    <script>
+
+        const paragraph= document.querySelector('.paragraph');
+        paragraph.addEventListener('click',()=>{
+            paragraph.textContent='change vayo'
+            //alert('clicked');
+        })
+
+
+        
+        const btn = document.querySelector('button');
+
+        function randomNumber(number){
+            return Math.floor(Math.random()*(number+1));
+        }
+        btn.addEventListener('click',()=>{
+            document.body.style.backgroundColor =`rgb(${randomNumber(255)},${randomNumber(255)},${randomNumber(255)}`;
+            //alert('clicked');
+        })
+        
+    </script>
+    
+</body>
+</html>
