@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
 </head>
-<body>
-    <h2 id="status">You are not logged in</h2>
-    <button id="loginBtn">Log In</button>
-    <button id="logoutBtn" style = " display: none;">Log Out</button>
-    
-</body>
-<script>
-    const status = document.getElementById('status');
 
-</script>
+<body>
+    <h2 id="status">Your are not logged in</h2>
+    <button id='loginBtn'>Log In</button>
+    <button id='logoutBtn' style="display: none;">Log Out</button>
+    <script>
+        const status = document.getElementById('status');
+        const loginBtn = document.getElementById('loginBtn');
+        const logoutBtn = document.getElementById('logoutBtn');
+
+        //check whether user is already logged in
+        if (localStorage.getItem('username')) {
+            status.innerText = `Welcome, ${localStorage.getItem('username')}`;
+            loginBtn.style.display = 'none';
+            logoutBtn.style.display = 'block'
+        }
+
+        // Login function
+        loginBtn.addEventListener('click', () => {
+            localStorage.setItem('username', 'Mohit'); // Set your name here
+            status.innerText = `Welcome, ${localStorage.getItem('username')} `;
+            loginBtn.style.display = 'none';
+            logoutBtn.style.display = 'block';
+        });
+
+        // Logout function
+        logoutBtn.addEventListener('click', () => {
+            localStorage.removeItem('username');
+            status.innerText = 'You are not logged in';
+            loginBtn.style.display = 'block';
+            logoutBtn.style.display = 'none';
+        });
+
+
+    </script>
+
+</body>
 
 </html>
