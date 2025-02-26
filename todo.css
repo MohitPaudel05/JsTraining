@@ -27,14 +27,14 @@ h2{
     
 }
 /*add task button*/
-#add{
+#addTaskBtn{
 width: 100%;
 padding: 10px;
 background-color: #28a475;
 color: white;
 cursor: pointer;
 border-radius: 5px;
-border: transparent;
+border: transparent  !important; 
 }
 #add:hover{
     background-color: #218838;
