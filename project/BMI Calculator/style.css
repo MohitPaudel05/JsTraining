@@ -1,0 +1,31 @@
+h1{
+    color:blue;
+}
+.container{
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50vh;
+    width: 80vh;
+    background-color: gainsboro;
+    flex-wrap: wrap;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+button{
+   border-radius: 5px;
+    height: 45px;
+    color: rgb(39, 39, 107);
+}
